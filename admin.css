@@ -1,2 +1,133 @@
-/* Identidade do painel: estação de controle do laboratório */
-body:has(#painelAdmin){background:#edf0e8}.topbar:has(#sairAdmin){background:#123d35;border:0;color:#f5f2e9;padding:16px clamp(18px,5vw,70px)}.topbar:has(#sairAdmin) .marca{color:#f5f2e9}.topbar:has(#sairAdmin) .simbolo{background:#bd704b}.topbar:has(#sairAdmin) .btn{background:#e7eee6;color:#123d35!important;border-color:#e7eee6}.page-wrap:has(#painelAdmin){max-width:1280px;margin:35px auto 70px}.page-wrap:has(#painelAdmin)>.row-between{padding:28px 4px 25px;border-bottom:1px solid #d4ddd2;margin-bottom:24px}.page-wrap:has(#painelAdmin)>.row-between h1{font:800 clamp(30px,4vw,45px) Manrope,sans-serif;letter-spacing:-.06em;color:#123d35;margin:10px 0}.page-wrap:has(#painelAdmin)>.row-between .eyebrow{color:#bd704b}.page-wrap:has(#painelAdmin)>.admin-grid{grid-template-columns:repeat(3,1fr);gap:15px;margin:22px 0 30px}.page-wrap:has(#painelAdmin) .stat{min-height:115px;background:#123d35;color:#c7d8ce;border:0;border-radius:17px;padding:23px;box-shadow:0 10px 25px #123d3517}.page-wrap:has(#painelAdmin) .stat strong{color:#e4c58a;font-size:32px}.page-wrap:has(#painelAdmin) #painelAdmin>.panel{margin:18px 0!important;border:1px solid #dce2d8;border-radius:18px;background:#fffefa;padding:26px;box-shadow:0 8px 28px #123d3508}.page-wrap:has(#painelAdmin) #painelAdmin>.panel h2{font:800 22px Manrope,sans-serif;color:#123d35;margin-bottom:18px}.page-wrap:has(#painelAdmin) .admin-card{background:#f7f5ed;border-color:#dce2d8}.page-wrap:has(#painelAdmin) .course-row{background:white}.page-wrap:has(#painelAdmin) .pdf-admin-item{background:#f7f5ed}.page-wrap:has(#painelAdmin) button{margin:4px 5px 4px 0}.page-wrap:has(#painelAdmin) .form-panel{margin:65px auto}.page-wrap:has(#painelAdmin) .form-panel h1{font-size:30px}.page-wrap:has(#painelAdmin) #listaCompras{overflow-x:auto}@media(max-width:680px){.page-wrap:has(#painelAdmin)>.admin-grid{grid-template-columns:1fr}.page-wrap:has(#painelAdmin){margin:18px auto 45px}.page-wrap:has(#painelAdmin) #painelAdmin>.panel{padding:19px}.page-wrap:has(#painelAdmin)>.row-between{align-items:flex-start}}
+/* Identidade visual do painel administrativo */
+
+body:has(#painelAdmin){
+background:#edf0e8
+}
+
+.topbar:has(#sairAdmin){
+background:#123d35;
+border:0;
+color:#f5f2e9;
+padding:16px clamp(18px,5vw,70px)
+}
+
+.topbar:has(#sairAdmin) .marca{
+color:#f5f2e9
+}
+
+.topbar:has(#sairAdmin) .simbolo{
+background:#bd704b
+}
+
+.topbar:has(#sairAdmin) .btn{
+background:#e7eee6;
+color:#123d35!important;
+border-color:#e7eee6
+}
+
+.page-wrap:has(#painelAdmin){
+max-width:1280px;
+margin:35px auto 70px
+}
+
+.page-wrap:has(#painelAdmin)>.row-between{
+padding:28px 4px 25px;
+border-bottom:1px solid #d4ddd2;
+margin-bottom:24px
+}
+
+.page-wrap:has(#painelAdmin)>.row-between h1{
+font:800 clamp(30px,4vw,45px) Manrope,sans-serif;
+letter-spacing:-.06em;
+color:#123d35;
+margin:10px 0
+}
+
+.page-wrap:has(#painelAdmin)>.row-between .eyebrow{
+color:#bd704b
+}
+
+.page-wrap:has(#painelAdmin)>.admin-grid{
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin:22px 0 30px
+}
+
+.page-wrap:has(#painelAdmin) .stat{
+min-height:115px;
+background:#123d35;
+color:#c7d8ce;
+border:0;
+border-radius:17px;
+padding:23px;
+box-shadow:0 10px 25px #123d3517
+}
+
+.page-wrap:has(#painelAdmin) .stat strong{
+color:#e4c58a;
+font-size:32px
+}
+
+.page-wrap:has(#painelAdmin) #painelAdmin>.panel{
+margin:18px 0!important;
+border:1px solid #dce2d8;
+border-radius:18px;
+background:#fffefa;
+padding:26px;
+box-shadow:0 8px 28px #123d3508
+}
+
+.page-wrap:has(#painelAdmin) #painelAdmin>.panel h2{
+font:800 22px Manrope,sans-serif;
+color:#123d35;
+margin-bottom:18px
+}
+
+.page-wrap:has(#painelAdmin) .admin-card{
+background:#f7f5ed;
+border-color:#dce2d8
+}
+
+.page-wrap:has(#painelAdmin) .course-row{
+background:white
+}
+
+.page-wrap:has(#painelAdmin) .pdf-admin-item{
+background:#f7f5ed
+}
+
+.page-wrap:has(#painelAdmin) button{
+margin:4px 5px 4px 0
+}
+
+.page-wrap:has(#painelAdmin) .form-panel{
+margin:65px auto
+}
+
+.page-wrap:has(#painelAdmin) .form-panel h1{
+font-size:30px
+}
+
+.page-wrap:has(#painelAdmin) #listaCompras{
+overflow-x:auto
+}
+
+@media(max-width:680px){
+
+.page-wrap:has(#painelAdmin)>.admin-grid{
+grid-template-columns:1fr
+}
+
+.page-wrap:has(#painelAdmin){
+margin:18px auto 45px
+}
+
+.page-wrap:has(#painelAdmin) #painelAdmin>.panel{
+padding:19px
+}
+
+.page-wrap:has(#painelAdmin)>.row-between{
+align-items:flex-start
+}
+
+}
