@@ -1,0 +1,131 @@
+
+/* BIBLIOTECA DE PDFs */
+
+.pdf-hero {
+  padding: 42px 0 25px;
+  position: relative;
+}
+
+.pdf-hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(30px,5vw,46px);
+  color: #103d37;
+  margin: 10px 0;
+  font-weight: 800;
+}
+
+.pdf-hero p {
+  color: #71847c;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 20px;
+  margin: 28px 0 55px;
+}
+
+.pdf-public-card,
+.pdf-student-item,
+.pdf-admin-item {
+  background: #fff;
+  border: 1px solid #dcebe3;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(16,61,55,.07);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.pdf-public-card:hover,
+.pdf-student-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(16,61,55,.12);
+}
+
+.pdf-public-card h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  color: #103d37;
+  margin: 0 0 10px;
+}
+
+.pdf-public-card p,
+.pdf-student-item p {
+  color: #71847c;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.pdf-icon {
+  width: 58px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg,#dff3e7,#edf8f0);
+  color: #087f68;
+  font-weight: 900;
+  border-radius: 13px;
+  margin-bottom: 17px;
+  font-size: 17px;
+  border: 1px solid #cce8d7;
+}
+
+.pdf-student-item {
+  margin: 13px 0;
+}
+
+.pdf-student-item .btn {
+  margin-top: 12px;
+}
+
+.pdf-admin-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.pdf-admin-item {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.pdf-admin-item p {
+  margin: 0;
+  color: #71847c;
+  font-size: 13px;
+}
+
+.pdf-upload-form {
+  margin: 16px 0 22px;
+  padding: 21px;
+  background: linear-gradient(145deg,#eaf6ef,#f7faf5);
+  border: 1px solid #d3e9dc;
+  border-radius: 15px;
+}
+
+.pdf-section-title {
+  margin-top: 30px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dcebe3;
+  color: #103d37;
+  font-family: 'Outfit', sans-serif;
+}
+
+@media(max-width:600px) {
+  .pdf-hero {
+    padding-top: 28px;
+  }
+
+  .pdf-public-card,
+  .pdf-student-item,
+  .pdf-admin-item {
+    padding: 17px;
+  }
+
+  .pdf-grid {
+    grid-template-columns: 1fr;
+  }
+}

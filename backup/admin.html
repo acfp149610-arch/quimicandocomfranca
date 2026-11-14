@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrador | Matemática com Zé Vitor</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js" defer></script>
+</head>
+
+<body class="pagina-admin">
+
+<header class="admin-header">
+    <h1>Área Administrativa</h1>
+    <p>Matemática com Zé Vitor</p>
+</header>
+
+<main class="admin-main">
+
+    <section id="login" class="login">
+        <h2>Acesso administrativo</h2>
+
+        <p>Digite seu e-mail para receber o link de acesso.</p>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Seu e-mail"
+            required
+        >
+
+        <button id="btnEntrar" type="button">
+            ENVIAR LINK DE ACESSO
+        </button>
+
+        <p id="mensagem"></p>
+    </section>
+
+    <section id="painel" hidden>
+
+        <div class="topo">
+            <div>
+                <h2>Painel de controle</h2>
+                <p>Gerenciamento de contratações</p>
+            </div>
+
+            <button id="btnSair" type="button">Sair</button>
+        </div>
+
+        <div class="resumo">
+
+            <div class="box">
+                <span id="total">0</span>
+                <p>Total</p>
+            </div>
+
+            <div class="box">
+                <span id="pendentes">0</span>
+                <p>Pendentes</p>
+            </div>
+
+            <div class="box">
+                <span id="confirmados">0</span>
+                <p>Confirmados</p>
+            </div>
+
+        </div>
+
+        <div class="ferramentas">
+            <h2>Contratações recebidas</h2>
+            <button id="btnAtualizar" type="button">
+                Atualizar lista
+            </button>
+        </div>
+
+        <div id="listaContratacoes">
+            Carregando...
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="admin-footer">
+    Matemática com Zé Vitor
+</footer>
+
+</body>
+</html>

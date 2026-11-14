@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matemática com Zé Vitor</title>
+
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <style>
+        /* QUESTÕES */
+
+        #questoes {
+            padding: 90px 8%;
+            background: #f4f8ff;
+            text-align: center;
+        }
+
+        #questoes h3 {
+            font-size: 36px;
+            color: #0756a5;
+            font-weight: 800;
+            margin-bottom: 45px;
+        }
+
+        #questoes .lista-questoes {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        #questoes .questao-link {
+            min-height: 190px;
+            padding: 30px 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            background: white;
+            color: #0756a5;
+
+            border: 1px solid #e0ebf8;
+            border-bottom: 5px solid #168bd5;
+            border-radius: 20px;
+
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+
+            box-shadow: 0 8px 25px rgba(7, 86, 165, 0.09);
+
+            transition: 0.3s ease;
+        }
+
+        #questoes .icone-questao {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #eaf3ff;
+            color: #0875c9;
+
+            border-radius: 18px;
+            font-size: 32px;
+        }
+
+        #questoes .questao-link:hover {
+            transform: translateY(-8px);
+            background: #0756a5;
+            color: white;
+            box-shadow: 0 15px 30px rgba(7, 86, 165, 0.2);
+        }
+
+        #questoes .questao-link:hover .icone-questao {
+            background: white;
+            color: #0756a5;
+        }
+
+        @media (max-width: 700px) {
+            #questoes {
+                padding: 65px 6%;
+            }
+
+            #questoes h3 {
+                font-size: 29px;
+                margin-bottom: 30px;
+            }
+
+            #questoes .lista-questoes {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            #questoes .questao-link {
+                min-height: 140px;
+                max-width: 400px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>MATEMÁTICA COM ZÉ VITOR</h2>
+
+    <nav>
+        <a href="#inicio">INÍCIO</a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#cursos">CURSOS</a>
+        <a href="#questoes">QUESTÕES</a>
+    </nav>
+</header>
+
+<main>
+
+    <section id="inicio">
+        <div>
+            <h1>MATEMÁTICA COM ZÉ VITOR</h1>
+            <p class="subtitulo">A RAIZ DO SUCESSO</p>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div>
+            <h3>QUEM SOU?</h3>
+
+            <p class="apresentacao">
+                Com uma paixão pelos números e pelo ensino, Zé Vitor é professor de Matemática e tem como objetivo tornar o aprendizado mais simples, prático e acessível para todos.
+
+                Com uma abordagem didática e dinâmica, busca explicar até os conteúdos mais difíceis de forma clara, ajudando seus alunos a desenvolverem o raciocínio lógico, superarem dificuldades e conquistarem seus objetivos.
+
+                Seja para reforçar os conhecimentos, se preparar para provas ou alcançar melhores resultados nos vestibulares, Zé Vitor está pronto para transformar a Matemática em algo muito mais fácil de entender!
+            </p>
+        </div>
+    </section>
+
+    <section id="cursos">
+
+        <h3 class="cursos">CURSOS</h3>
+
+        <div class="cursoum">
+            <h4 class="curso1">Curso 1</h4>
+            <p class="curso11">Texto sobre o curso 1</p>
+
+            <button type="button" data-curso="1">
+                CONTRATAR
+            </button>
+        </div>
+
+        <div class="cursodois">
+            <h4 class="curso2">Curso 2</h4>
+            <p class="curso21">Texto sobre o curso 2</p>
+
+            <button type="button" data-curso="2">
+                CONTRATAR
+            </button>
+        </div>
+
+    </section>
+
+    <section id="questoes">
+        <div>
+            <h3>QUESTÕES</h3>
+
+            <div class="lista-questoes">
+
+                <a class="questao-link" href="LINK_PAES_1" target="_blank" rel="noopener">
+                    <span class="icone-questao">∑</span>
+                    PAES 1
+                </a>
+
+                <a class="questao-link" href="LINK_PAES_2" target="_blank" rel="noopener">
+                    <span class="icone-questao">∑</span>
+                    PAES 2
+                </a>
+
+                <a class="questao-link" href="LINK_PAES_3" target="_blank" rel="noopener">
+                    <span class="icone-questao">∑</span>
+                    PAES 3
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

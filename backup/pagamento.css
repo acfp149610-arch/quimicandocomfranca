@@ -1,0 +1,214 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f8;
+    color: #222;
+    min-height: 100vh;
+    padding: 35px 15px;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULOS */
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #173b70;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: #173b70;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: #333;
+    margin: 25px 0 15px;
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* RESUMO */
+
+.resumo {
+    background: #f1f5fb;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border-left: 5px solid #173b70;
+}
+
+.resumo h3 {
+    margin-top: 0;
+    text-align: left;
+    color: #173b70;
+}
+
+.resumo p {
+    margin: 12px 0;
+    color: #444;
+}
+
+.resumo h2 {
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #16834a;
+}
+
+/* QR CODE */
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px;
+    width: fit-content;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+/* PIX COPIA E COLA */
+
+#codigoPix {
+    width: 100%;
+    height: 90px;
+    padding: 12px;
+    resize: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 12px;
+    background: #f9fafc;
+    margin-bottom: 15px;
+    word-break: break-all;
+}
+
+/* BOTÕES */
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #173b70;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 12px;
+}
+
+button:hover {
+    background: #24569b;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* MENSAGENS */
+
+#mensagem {
+    color: #16834a;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.aviso {
+    background: #fff8e7;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #755b20 !important;
+    font-size: 14px;
+}
+
+/* ÁREA DO COMPROVANTE */
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+#comprovante {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 20px;
+    background: #f8f9fc;
+    border: 2px dashed #b8c5d8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#finalizar {
+    background: #16834a;
+    margin-top: 10px;
+}
+
+#finalizar:hover {
+    background: #10683a;
+}
+
+#statusEnvio {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .resumo {
+        padding: 18px;
+    }
+
+    button {
+        padding: 14px;
+    }
+}

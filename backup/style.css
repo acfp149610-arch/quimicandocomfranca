@@ -1,0 +1,327 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f8ff;
+    color: #102b50;
+}
+
+/* CABEÇALHO */
+
+header {
+    width: 100%;
+    min-height: 80px;
+    padding: 20px 8%;
+    background: #082b59;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #001b3d30;
+}
+
+header h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #dceaff;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #61b8ff;
+}
+
+/* INÍCIO */
+
+#inicio {
+    min-height: 570px;
+    background: linear-gradient(135deg, #061d40, #0756a5, #168bd5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+#inicio::before {
+    content: "∑";
+    position: absolute;
+    font-size: 350px;
+    color: #ffffff12;
+    right: 5%;
+    top: 10px;
+}
+
+#inicio h1 {
+    font-size: clamp(32px, 6vw, 65px);
+    font-weight: 800;
+    position: relative;
+}
+
+.subtitulo {
+    font-size: 20px;
+    letter-spacing: 8px;
+    color: #9ddaff;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* SOBRE */
+
+#sobre {
+    padding: 100px 12%;
+    text-align: center;
+    background: white;
+}
+
+#sobre h3,
+#questoes h3 {
+    font-size: 32px;
+    color: #0756a5;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.apresentacao {
+    max-width: 850px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+    color: #536984;
+    text-align: justify;
+}
+
+/* CURSOS */
+
+#cursos {
+    padding: 90px 8%;
+    text-align: center;
+    background: #eaf3ff;
+}
+
+.cursos {
+    font-size: 35px;
+    color: #0756a5;
+    margin-bottom: 45px;
+}
+
+.cursoum,
+.cursodois {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+    max-width: 100%;
+    min-height: 260px;
+    background: white;
+    padding: 35px 25px;
+    margin: 12px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #073b7515;
+    border-bottom: 5px solid #168bd5;
+    transition: 0.3s;
+}
+
+.cursoum:hover,
+.cursodois:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px #073b7525;
+}
+
+.curso1,
+.curso2 {
+    font-size: 23px;
+    color: #0756a5;
+    margin-bottom: 20px;
+}
+
+.curso11,
+.curso21 {
+    color: #62758e;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+button {
+    background: #0875c9;
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #06447f;
+    transform: scale(1.04);
+}
+
+/* QUESTÕES */
+
+#questoes {
+    padding: 90px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+#questoes h3 {
+    font-size: 36px;
+    color: #0756a5;
+    font-weight: 800;
+    margin-bottom: 45px;
+}
+
+#questoes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 240px;
+    min-height: 115px;
+
+    margin: 12px;
+    padding: 25px;
+
+    background: #ffffff;
+    color: #0756a5;
+
+    border: 1px solid #dceaff;
+    border-bottom: 5px solid #168bd5;
+    border-radius: 18px;
+
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+
+    box-shadow: 0 8px 25px rgba(7, 86, 165, 0.09);
+
+    transition: all 0.3s ease;
+}
+
+#questoes a::before {
+    content: "∑";
+    font-size: 30px;
+    margin-right: 12px;
+    color: #168bd5;
+}
+
+#questoes a:hover {
+    background: #0756a5;
+    color: white;
+    transform: translateY(-7px);
+    border-bottom-color: #168bd5;
+    box-shadow: 0 15px 30px rgba(7, 86, 165, 0.2);
+}
+
+#questoes a:hover::before {
+    color: white;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+    #questoes {
+        padding: 65px 5%;
+    }
+
+    #questoes h3 {
+        font-size: 29px;
+        margin-bottom: 30px;
+    }
+
+    #questoes a {
+        width: 100%;
+        max-width: 350px;
+        min-height: 90px;
+        margin: 9px 0;
+        font-size: 18px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+    #questoes {
+        padding: 60px 5%;
+    }
+
+    #questoes p {
+        width: 100%;
+        max-width: 350px;
+        min-height: 85px;
+        margin: 8px 0;
+        font-size: 15px;
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #inicio {
+        min-height: 450px;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+        letter-spacing: 5px;
+    }
+
+    #sobre {
+        padding: 65px 8%;
+    }
+
+    .apresentacao {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    #cursos,
+    #questoes {
+        padding: 65px 5%;
+    }
+
+    .cursoum,
+    .cursodois {
+        width: 100%;
+        margin: 12px 0;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento PIX</title>
+    <link rel="stylesheet" href="pagamento.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+    <main class="container">
+
+        <h1>PAGAMENTO</h1>
+        <p>Finalize sua contratação realizando o pagamento via PIX.</p>
+
+        <div class="resumo">
+            <h3>Resumo da contratação</h3>
+            <p id="nome"></p>
+            <p id="curso"></p>
+            <h2 id="valor"></h2>
+        </div>
+
+        <h3>ESCANEIE O QR CODE</h3>
+        <div id="qrcode"></div>
+
+        <h3>OU UTILIZE O PIX COPIA E COLA</h3>
+        <textarea id="codigoPix" readonly></textarea>
+
+        <button type="button" id="copiar">COPIAR CÓDIGO PIX</button>
+
+        <p id="mensagem"></p>
+
+        <hr>
+
+        <h2>ENVIO DO COMPROVANTE</h2>
+
+        <p>Após realizar o pagamento, anexe seu comprovante PIX.</p>
+
+        <input
+            type="file"
+            id="comprovante"
+            accept="image/*,.pdf"
+            required
+        >
+
+        <button type="button" id="finalizar">
+            FINALIZAR CONTRATAÇÃO
+        </button>
+
+        <p id="statusEnvio"></p>
+
+    </main>
+    <script src="https://acfp149610-arch.github.io/pagamento.js?v=2" defer></script>
+</body>
+</html>

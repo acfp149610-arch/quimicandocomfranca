@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Matemática com Zé Vitor</title>
+    <link rel="stylesheet" href="dados.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>FINALIZE SUA CONTRATAÇÃO</h1>
+        <p>Preencha seus dados para continuar.</p>
+
+        <form id="formCadastro">
+
+            <label>Nome completo</label>
+            <input type="text" name="nome" required>
+
+            <label>E-mail</label>
+            <input type="email" name="email" required>
+
+            <label>WhatsApp</label>
+            <input type="tel" name="telefone" required>
+
+            <label>CPF</label>
+            <input type="text" name="cpf" required>
+
+            <label>Curso escolhido</label>
+            <input type="text" id="curso" readonly>
+
+            <button type="submit">CONTINUAR PARA PAGAMENTO</button>
+
+        </form>
+    </main>
+
+    <script src="dados.js"></script>
+
+</body>
+</html>

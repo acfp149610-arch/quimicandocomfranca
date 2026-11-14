@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07552d"><meta name="description" content="Cursos de química com França.">
+  <title>Quimicando com França | Cursos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js" defer></script><script src="catalogo.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="marca" href="index.html"><span class="simbolo">⚗</span><span>QUIMICANDO <small>COM FRANÇA</small></span></a><nav><a href="#inicio">Início</a><a href="#cursos">Cursos</a><a href="#sobre">Sobre</a><a href="pdfs-gratuitos.html">PDFs gratuitos</a><a class="btn btn-outline" href="login.html">Entrar</a><a href="admin.html" id="linkAdmin" hidden style="display:none">
+  Área do Administrador
+</a>
+</nav></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-inner"><span class="eyebrow">APRENDA NO SEU RITMO</span><h1>A fórmula do sucesso<br><em>começa aqui.</em></h1><p>Aprenda química com aulas organizadas, explicações claras e acompanhamento do seu progresso.</p><a class="btn" href="#cursos">Conhecer os cursos</a></div><div class="hero-art" aria-hidden="true"><div class="formula">H₂O + CO₂</div><div class="sigma">⚗</div><div class="formula small-formula">pH = 7</div></div></section>
+<section class="section" id="cursos"><div class="section-heading"><div><span class="eyebrow">ESCOLHA SEU CAMINHO</span><h2>Nossos cursos</h2></div><p>Cada curso é adquirido individualmente. Após a confirmação do pagamento, ele aparece na sua área do aluno.</p></div><div id="listaCursos" class="course-grid"><div class="loading">Carregando cursos...</div></div><p id="erroCursos" class="feedback" role="status"></p></section>
+<section class="about" id="sobre"><div><span class="eyebrow">QUEM SOU?</span><h2>Química sem complicação.</h2></div><p>Com uma paixão pelos experimentos e pelo ensino, França busca tornar o aprendizado mais simples, prático e acessível. A proposta é explicar os conteúdos com clareza e ajudar cada aluno a desenvolver confiança e raciocínio científico.</p></section>
+</main><footer><a class="marca" href="index.html"><span class="simbolo">⚗</span><span>QUIMICANDO <small>COM FRANÇA</small></span></a><span>© <span id="ano"></span> Quimicando com França</span><a href="login.html">Área do aluno</a></footer>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const linkAdmin = document.getElementById('linkAdmin');
+
+  if (!linkAdmin) return;
+
+  linkAdmin.hidden = true;
+
+  const supabaseClient = window.supabase.createClient(
+    APP_CONFIG.SUPABASE_URL,
+    APP_CONFIG.SUPABASE_ANON_KEY
+  );
+
+  const { data: { user } } =
+    await supabaseClient.auth.getUser();
+
+  if (!user) return;
+
+  const { data, error } = await supabaseClient
+    .from('admins')
+    .select('user_id')
+    .eq('user_id', user.id)
+    .maybeSingle();
+
+  if (!error && data) {
+    linkAdmin.hidden = false;
+linkAdmin.style.display = 'inline-block';
+  }
+});
+</script>
+</body></html>
